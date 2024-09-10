@@ -93,5 +93,87 @@ The H2 console can be accessed at http://localhost:8080/h2-console.
 
 
 ### 4.API Endpoints
-**Authentication APIs**
+## Authentication APIs
+
+### Login
+
+- `POST /api/auth/login`
+- Use this point to authenticate users and admins using JWT.
+
+
+## Product and Inventory Management APIs
+
+### Create Product
+
+-  `POST /api/products`
+-  Use this point to create a new product.
+
+### Get Product by ID
+
+-  `GET /api/products/{id}`
+-  Use this point to retrieve a product by its ID.
+
+### Update Product
+
+-  `PUT /api/products/{id}`
+-  Use this point to update an existing product by its ID.
+
+### Delete Product
+
+-  `DELETE /api/products/{id}`
+-  Use this point to delete a product by its ID.
+
+### Paginated Product Search API
+
+-  `GET /api/products/search`
+  - `name` (optional): The name of the product to search for.
+  - `page` (optional): The page number for pagination.
+  - `size` (optional): The number of items per page.
+  - `sortBy` (optional): The field by which to sort the results.
+- GET /api/products/search?name=example&page=1&size=20&sortBy=name
+- Use this point to search for products with pagination and sorting options.
+
+
+
+## Cart Management APIs
+
+### Add Item to Cart
+
+- `POST /api/cart`
+- Use this point to add an item to the cart.
+
+### Remove Item from Cart
+
+-  `DELETE /api/cart/{itemId}`
+-  Use this point to remove an item from the cart by its ID.
+
+### Update Cart Item Quantity
+
+-  `PUT /api/cart/{itemId}`
+-  Use this point to update the quantity of a cart item by its ID.
+
+### View Cart Status
+
+-  `GET /api/cart`
+-  Use this point to retrieve the current status of the cart.
+
+
+
+## Order Placement API
+
+### Place Order
+
+-  `POST /api/orders`
+-  Use this point to place a new order.
+
+
+
+## Configuration Files
+
+- **`src/main/resources/application.properties`**:
+
+## Transaction Management
+
+The application uses Spring's `@Transactional` annotation to manage database transactions and ensure data consistency.
+
 
