@@ -72,3 +72,26 @@ This assignment involves developing a backend for an E-commerce platform using J
 ```bash
 git clone <repository-link>
 cd <repository-directory>
+
+````
+
+### 2.Build the Project
+
+To build the project and download the required dependencies, use Maven:
+
+```bash
+mvn clean install
+````
+- The application will start at http://localhost:8080.
+
+### 3.Access the H2 Database Console
+The H2 console can be accessed at http://localhost:8080/h2-console.
+
+- JDBC URL: jdbc:h2:mem:testdb
+- Username: sa
+- Password: password
+
+
+### 4.API Endpoints
+**Authentication APIs**
+
