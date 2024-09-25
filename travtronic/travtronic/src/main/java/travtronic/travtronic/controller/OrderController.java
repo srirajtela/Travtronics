@@ -21,5 +21,9 @@ public class OrderController {
     public Order placeOrder(@RequestParam Long userId) {
         return orderService.placeOrder(userId);
     }
+
+    public Order fetchOrder(@RequestParam Long usereId) {
+        return orderService.fetchOrder(uderId);
+    
 }
 
